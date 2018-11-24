@@ -8,3 +8,6 @@
 # ~/.local/share/recently-used.xbel
 kwriteconfig --group RecentDocuments --key UseRecent false
 kwriteconfig5 --group RecentDocuments --key UseRecent false
+
+# Use "Recently used" for window sort order, not "Stacking order".
+kwriteconfig5 --file ~/.config/kwinrc --group TabBox --key SwitchingMode 0
