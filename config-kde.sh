@@ -14,3 +14,5 @@ kwriteconfig5 --file ~/.config/kwinrc --group TabBox --key SwitchingMode 0
 
 # Use Xrender instead of OpenGL to prevent flickering.
 kwriteconfig5 --file ~/.config/kwinrc --group Compositing --key Backend XRender
+# https://bugs.kde.org/show_bug.cgi?id=384660
+# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=854372
