@@ -9,6 +9,9 @@
 kwriteconfig --group RecentDocuments --key UseRecent false
 kwriteconfig5 --group RecentDocuments --key UseRecent false
 
+# Use Firefox browser for http and https URLs.
+kwriteconfig5 --file kdeglobals --group 'General' --key 'BrowserApplication' 'firefox.desktop'
+
 # Use "Recently used" for window sort order, not "Stacking order".
 kwriteconfig5 --file kwinrc --group TabBox --key SwitchingMode 0
 
