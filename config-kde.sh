@@ -28,4 +28,4 @@ kwriteconfig5 --file ~/.config/emaildefaults \
 kwriteconfig5 --file ~/.config/emaildefaults \
     --group "PROFILE_Default" --key "EmailClient" "/usr/bin/thunderbird"
 kwriteconfig5 --file ~/.config/emaildefaults \
-    --group "PROFILE_Default" --key "TerminalClient" "false"
+    --group "PROFILE_Default" --key "TerminalClient" --type "bool" "false"
