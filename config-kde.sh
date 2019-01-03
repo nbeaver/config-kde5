@@ -21,3 +21,11 @@ kwriteconfig5 --file ~/.config/kwinrc --group Compositing --key Backend XRender
 kwriteconfig5 --file ~/.config/plasma-org.kde.plasma.desktop-appletsrc \
     --group Containments --group 1 --group Wallpaper --group org.kde.color \
     --group General --key Color "152,39,29"
+
+# Set Thunderbird as the default email reader.
+kwriteconfig5 --file ~/.config/emaildefaults \
+    --group "Defaults" --key "Profile" "Default"
+kwriteconfig5 --file ~/.config/emaildefaults \
+    --group "PROFILE_Default" --key "EmailClient" "thunderbird"
+kwriteconfig5 --file ~/.config/emaildefaults \
+    --group "PROFILE_Default" --key "TerminalClient" "false"
