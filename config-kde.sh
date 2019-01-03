@@ -29,6 +29,6 @@ kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc \
 kwriteconfig5 --file emaildefaults \
     --group "Defaults" --key "Profile" "Default"
 kwriteconfig5 --file emaildefaults \
-    --group "PROFILE_Default" --key "EmailClient" "/usr/bin/thunderbird"
+    --group "PROFILE_Default" --key "EmailClient" "/usr/bin/thunderbird %u"
 kwriteconfig5 --file emaildefaults \
     --group "PROFILE_Default" --key "TerminalClient" --type "bool" "false"
