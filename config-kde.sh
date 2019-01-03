@@ -32,3 +32,11 @@ kwriteconfig5 --file emaildefaults \
     --group "PROFILE_Default" --key "EmailClient" "/usr/bin/thunderbird %u"
 kwriteconfig5 --file emaildefaults \
     --group "PROFILE_Default" --key "TerminalClient" --type "bool" "false"
+
+# Turn off alert noise when AC adapter is unplugged.
+kwriteconfig5 --file powerdevil.notifyrc \
+    --group 'Event/unplugged' --key 'Action' ''
+
+# Turn off alert noise when trash is emptied.
+kwriteconfig5 --file  plasma_workspace.notifyrc \
+    --group 'Event/Trash: emptied' --key 'Action' ''
