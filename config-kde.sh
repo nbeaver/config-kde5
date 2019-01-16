@@ -40,3 +40,11 @@ kwriteconfig5 --file powerdevil.notifyrc \
 # Turn off alert noise when trash is emptied.
 kwriteconfig5 --file  plasma_workspace.notifyrc \
     --group 'Event/Trash: emptied' --key 'Action' ''
+
+
+# Set lock screen background to black
+kwriteconfig5 --file  kscreenlockerrc \
+    --group 'Greeter' --key 'WallpaperPlugin' 'org.kde.color'
+kwriteconfig5 --file  kscreenlockerrc \
+    --group 'Greeter' --group 'Wallpaper' --group 'org.kde.color' --group 'General' \
+    --key 'Color' '0,0,0'
