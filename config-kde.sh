@@ -48,3 +48,10 @@ kwriteconfig5 --file  kscreenlockerrc \
 kwriteconfig5 --file  kscreenlockerrc \
     --group 'Greeter' --group 'Wallpaper' --group 'org.kde.color' --group 'General' \
     --key 'Color' '0,0,0'
+
+
+# Narrower window drop shadows.
+kwriteconfig5 --file breezerc \
+    --group 'Common' --key 'ShadowSize' 'ShadowSmall'
+# Default is 'ShadowLarge'
+# $ kcmshell5 kwindecoration
