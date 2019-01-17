@@ -8,7 +8,7 @@
 # ~/.local/share/recently-used.xbel
 kwriteconfig --file kdeglobals --group RecentDocuments --key UseRecent false
 kwriteconfig5 --file kdeglobals --group RecentDocuments --key UseRecent false
-# 
+# Apparently no kcmshell5 command?
 
 # Use Firefox browser for http and https URLs.
 kwriteconfig5 --file kdeglobals --group 'General' --key 'BrowserApplication' 'firefox.desktop'
