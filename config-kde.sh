@@ -55,3 +55,14 @@ kwriteconfig5 --file breezerc \
     --group 'Common' --key 'ShadowSize' 'ShadowSmall'
 # Default is 'ShadowLarge'
 # $ kcmshell5 kwindecoration
+
+
+# Turn off kwallet.
+kwriteconfig5 --file kwalletrc \
+    --group 'Wallet' --key 'Enabled' 'false'
+kwriteconfig5 --file kwalletrc \
+    --group 'Wallet' --key 'First Use' 'false'
+# $ kchmshell5 kwalletconfig5
+# https://unix.stackexchange.com/questions/196522/disable-kwallet-password-request-in-arch-plasma-5
+# https://askubuntu.com/questions/47216/how-to-disable-kde-wallet
+# https://github.com/ryanpcmcquen/linuxTweaks/blob/master/.kdeSetup.sh
