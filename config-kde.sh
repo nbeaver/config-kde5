@@ -80,3 +80,10 @@ kwriteconfig5 --file kwalletrc \
 # https://unix.stackexchange.com/questions/450731/disable-kde-wallet-from-the-command-line
 # https://askubuntu.com/questions/47216/how-to-disable-kde-wallet
 # https://github.com/ryanpcmcquen/linuxTweaks/blob/master/.kdeSetup.sh
+
+# Disable file indexing by baloofile.
+kwriteconfig5 --file kcmshell5rc \
+    --group 'Basic Settings' --key 'Indexing-Enabled' 'false'
+
+kwriteconfig5 --file baloofilerc \
+    --group 'Basic Settings' --key 'Indexing-Enabled' 'false'
