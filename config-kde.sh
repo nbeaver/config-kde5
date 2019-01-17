@@ -6,24 +6,33 @@
 # ~/.kde/share/apps/RecentDocuments/
 # ~/.local/share/RecentDocuments
 # ~/.local/share/recently-used.xbel
-kwriteconfig --group RecentDocuments --key UseRecent false
-kwriteconfig5 --group RecentDocuments --key UseRecent false
+kwriteconfig --file kdeglobals --group RecentDocuments --key UseRecent false
+kwriteconfig5 --file kdeglobals --group RecentDocuments --key UseRecent false
+# 
 
 # Use Firefox browser for http and https URLs.
 kwriteconfig5 --file kdeglobals --group 'General' --key 'BrowserApplication' 'firefox.desktop'
+# $ kcmshell5 componentchooser
 
 # Use "Recently used" for window sort order, not "Stacking order".
 kwriteconfig5 --file kwinrc --group TabBox --key SwitchingMode 0
+# $ kcmshell5 kwintabbox
 
 # Use Xrender instead of OpenGL to prevent flickering.
 kwriteconfig5 --file kwinrc --group Compositing --key Backend XRender
 # https://bugs.kde.org/show_bug.cgi?id=384660
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=854372
+# $ kcmshell5 kwincompositing
+
+# Use fastest animation speed.
+kwriteconfig5 --file kwinrc --group Compositing --key 'AnimationSpeed' '0'
+# $ kcmshell5 kwincompositing
 
 # Set the background color to a nice reddish brown.
 kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc \
     --group Containments --group 1 --group Wallpaper --group org.kde.color \
     --group General --key Color "152,39,29"
+# Apparently no kcmshell5 module.
 
 # Set Thunderbird as the default email reader.
 kwriteconfig5 --file emaildefaults \
@@ -32,14 +41,17 @@ kwriteconfig5 --file emaildefaults \
     --group "PROFILE_Default" --key "EmailClient" "/usr/bin/thunderbird %u"
 kwriteconfig5 --file emaildefaults \
     --group "PROFILE_Default" --key "TerminalClient" --type "bool" "false"
+# $ kcmshell5 componentchooser
 
 # Turn off alert noise when AC adapter is unplugged.
 kwriteconfig5 --file powerdevil.notifyrc \
     --group 'Event/unplugged' --key 'Action' ''
+# $ kcmshell5 kcmnotify
 
 # Turn off alert noise when trash is emptied.
 kwriteconfig5 --file  plasma_workspace.notifyrc \
     --group 'Event/Trash: emptied' --key 'Action' ''
+# $ kcmshell5 kcmnotify
 
 
 # Set lock screen background to black
@@ -48,6 +60,7 @@ kwriteconfig5 --file  kscreenlockerrc \
 kwriteconfig5 --file  kscreenlockerrc \
     --group 'Greeter' --group 'Wallpaper' --group 'org.kde.color' --group 'General' \
     --key 'Color' '0,0,0'
+# $ kcmshell5 screenlocker
 
 
 # Narrower window drop shadows.
