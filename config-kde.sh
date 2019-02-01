@@ -28,6 +28,9 @@ kwriteconfig5 --file kwinrc --group Compositing --key Backend XRender
 kwriteconfig5 --file kwinrc --group Compositing --key 'AnimationSpeed' '0'
 # $ kcmshell5 kwincompositing
 
+# Disable sliding popup effect.
+kwriteconfig5 --file kwinrc --group Plugins --key 'slidingpopupsEnabled' --type 'bool' 'false'
+
 # Set the background color to a nice reddish brown.
 kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc \
     --group Containments --group 1 --group Wallpaper --group org.kde.color \
