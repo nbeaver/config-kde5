@@ -30,9 +30,11 @@ kwriteconfig5 --file kwinrc --group Compositing --key 'AnimationSpeed' '0'
 
 # Disable sliding popup effect.
 kwriteconfig5 --file kwinrc --group Plugins --key 'slidingpopupsEnabled' --type 'bool' 'false'
+# $ kcmshell5 kcmkwineffects
 
 # Disable compositor (Keyboard shortcut: Shift-Alt-F12)
 kwriteconfig5 --file kwinrc --group 'Compositing' --key 'enabled' --type 'bool' 'false'
+# $ kcmshell5 kwincompositing
 # https://superuser.com/questions/1001397/reduce-visual-effects-in-kde-plasma
 
 # Set the background color to a nice reddish brown.
