@@ -62,6 +62,12 @@ kwriteconfig5 --file  plasma_workspace.notifyrc \
     --group 'Event/Trash: emptied' --key 'Action' ''
 # $ kcmshell5 kcmnotify
 
+# Turn off alerts for console bells.
+kwriteconfig5 --file  konsole.notifyrc \
+    --group 'Event/BellInvisible' --key 'Action' ''
+kwriteconfig5 --file  konsole.notifyrc \
+    --group 'Event/BellVisible' --key 'Action' ''
+# $ kcmshell5 kcmnotify
 
 # Set lock screen background to black
 kwriteconfig5 --file  kscreenlockerrc \
