@@ -104,12 +104,8 @@ kwriteconfig5 --file baloofilerc \
     --group 'Basic Settings' --key 'Indexing-Enabled' 'false'
 
 # Don't show media controls on the lock screen.
-kwriteconfig5 --file lockscreenrc --group 'General' --key 'showMediaControls' --type 'bool' 'false'
-#kwriteconfig5 --file kdeglobals --group 'General' --key 'showMediaControls' --type 'bool' 'false'
-#kwriteconfig5 --file kcmshell5rc --group 'General' --key 'showMediaControls' --type 'bool' 'false'
-#kwriteconfig5 --file plasmarc --group 'General' --key 'showMediaControls' --type 'bool' 'false'
-#kwriteconfig5 --file breezerc --group 'General' --key 'showMediaControls' --type 'bool' 'false'
-# TODO: why doesn't this work?
-# Not sure about graphical config, maybe one of these?
-# $ kcmshell5 kcm_lookandfeel
+kwriteconfig5 --file kscreenlockerrc \
+    --group 'Greeter' --group 'LnF' --group 'General' \
+    --key 'showMediaControls' --type 'bool' 'false'
 # $ kcmshell5 screenlocker
+# https://askubuntu.com/questions/1127086/disable-display-of-media-controls-on-lock-screen-showmediacontrols-on-kde-plas/
