@@ -84,7 +84,8 @@ kwriteconfig5 --file  kscreenlockerrc \
     --key 'Timeout' '10'
 # $ kcmshell5 screenlocker
 # https://github.com/KDE/kscreenlocker/blob/505fedc37d7e7989421787939f9ec7a1c6b159d3/kcfg/kscreenlockersettings.kcfg
-
+# Note that this won't take affect until logout / login.
+# https://askubuntu.com/questions/803629/how-do-i-programmatically-disable-the-kde-screen-locker
 
 # Narrower window drop shadows.
 kwriteconfig5 --file breezerc \
