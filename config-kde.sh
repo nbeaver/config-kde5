@@ -77,6 +77,14 @@ kwriteconfig5 --file  kscreenlockerrc \
     --key 'Color' '0,0,0'
 # $ kcmshell5 screenlocker
 
+# Set "Lock screen automatically after" to 10 minutes
+# instead of the default 15 minutes.
+kwriteconfig5 --file  kscreenlockerrc \
+    --group 'Daemon' \
+    --key 'Timeout' '10'
+# $ kcmshell5 screenlocker
+# https://github.com/KDE/kscreenlocker/blob/505fedc37d7e7989421787939f9ec7a1c6b159d3/kcfg/kscreenlockersettings.kcfg
+
 
 # Narrower window drop shadows.
 kwriteconfig5 --file breezerc \
