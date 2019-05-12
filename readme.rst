@@ -15,8 +15,10 @@ Why not just track the full config files?
 There are many practical difficulties
 with keeping configuration files under version control.
 For example, some fields change often,
-such as speedbar width and pixel dimensions for dialog sizes in ``kdeglobals``.
+such as speedbar width
+and pixel dimensions for dialog sizes in ``kdeglobals``.
 
-By keeping the configuration settings as commands in an executable script,
+By storing the configuration settings
+as commands in an executable shell script,
 it is easy to selectively apply settings to an existing workspace,
 while keeping comments and context for the modifications.
