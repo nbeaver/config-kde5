@@ -1,2 +1,2 @@
-all :
+configure :
 	./config-kde.sh
