@@ -118,3 +118,12 @@ kwriteconfig5 --file kscreenlockerrc \
     --key 'showMediaControls' --type 'bool' 'false'
 # $ kcmshell5 screenlocker
 # https://askubuntu.com/questions/1127086/disable-display-of-media-controls-on-lock-screen-showmediacontrols-on-kde-plas/
+
+# Make sure desktop session starts empty. Options:
+# - Restore previous session: 'restorePreviousLogout'
+# - Restore manually saved session: 'restoreSavedSession'
+# - Start with an empty session: 'default'
+# Why empty? In case of a misbehaving application or a corrupted sesssion.
+kwriteconfig5 --file ksmserverrc \
+    --group 'General' --key 'loginMode' 'default'
+# $ kcmshell5 kcmsmserver
