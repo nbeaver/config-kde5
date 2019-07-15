@@ -103,6 +103,7 @@ kwriteconfig5 --file kwalletrc \
 # https://unix.stackexchange.com/questions/196522/disable-kwallet-password-request-in-arch-plasma-5
 # https://unix.stackexchange.com/questions/450731/disable-kde-wallet-from-the-command-line
 # https://askubuntu.com/questions/47216/how-to-disable-kde-wallet
+# https://askubuntu.com/questions/284770/how-to-disable-kde-wallet-and-have-remember-password-working
 # https://github.com/ryanpcmcquen/linuxTweaks/blob/master/.kdeSetup.sh
 
 # Disable file indexing by baloofile.
