@@ -77,6 +77,8 @@ kwriteconfig5 --file  plasma_workspace.notifyrc \
 kwriteconfig5 --file  plasma_workspace.notifyrc \
     --group 'Event/messageboxQuestion' --key 'Action' 'Popup'
 kwriteconfig5 --file  plasma_workspace.notifyrc \
+    --group 'Event/notification' --key 'Action' 'Popup'
+kwriteconfig5 --file  plasma_workspace.notifyrc \
     --group 'Event/printerror' --key 'Action' 'Popup'
 kwriteconfig5 --file  plasma_workspace.notifyrc \
     --group 'Event/warning' --key 'Action' 'Popup'
