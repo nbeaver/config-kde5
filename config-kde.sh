@@ -62,6 +62,24 @@ kwriteconfig5 --file  plasma_workspace.notifyrc \
     --group 'Event/Trash: emptied' --key 'Action' ''
 # $ kcmshell5 kcmnotify
 
+# Turn off alert noises for warnings and errors (popup instead).
+kwriteconfig5 --file  plasma_workspace.notifyrc \
+    --group 'Event/catastrophe' --key 'Action' 'Popup'
+kwriteconfig5 --file  plasma_workspace.notifyrc \
+    --group 'Event/fatalerror' --key 'Action' 'Popup'
+kwriteconfig5 --file  plasma_workspace.notifyrc \
+    --group 'Event/messageCritical' --key 'Action' 'Popup'
+kwriteconfig5 --file  plasma_workspace.notifyrc \
+    --group 'Event/messageInformation' --key 'Action' 'Popup'
+kwriteconfig5 --file  plasma_workspace.notifyrc \
+    --group 'Event/messageWarning' --key 'Action' 'Popup'
+kwriteconfig5 --file  plasma_workspace.notifyrc \
+    --group 'Event/messageboxQuestion' --key 'Action' 'Popup'
+kwriteconfig5 --file  plasma_workspace.notifyrc \
+    --group 'Event/printerror' --key 'Action' 'Popup'
+kwriteconfig5 --file  plasma_workspace.notifyrc \
+    --group 'Event/warning' --key 'Action' 'Popup'
+
 # Turn off alerts for console bells.
 kwriteconfig5 --file  konsole.notifyrc \
     --group 'Event/BellInvisible' --key 'Action' ''
