@@ -63,6 +63,7 @@ kwriteconfig5 --file  plasma_workspace.notifyrc \
 # $ kcmshell5 kcmnotify
 
 # Turn off alert noises for warnings and errors (popup instead).
+# ~/.config/plasma_workspace.notifyrc
 kwriteconfig5 --file  plasma_workspace.notifyrc \
     --group 'Event/catastrophe' --key 'Action' 'Popup'
 kwriteconfig5 --file  plasma_workspace.notifyrc \
