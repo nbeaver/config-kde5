@@ -149,3 +149,7 @@ kwriteconfig5 --file kscreenlockerrc \
 kwriteconfig5 --file ksmserverrc \
     --group 'General' --key 'loginMode' 'default'
 # $ kcmshell5 kcmsmserver
+
+# Do not obey DRM limitations.
+kwriteconfig5 --file okularpartrc \
+    --group 'Core General' --key 'ObeyDRM' --type 'bool' 'false'
