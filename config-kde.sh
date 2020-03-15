@@ -172,3 +172,5 @@ kwriteconfig5 --file yakuakerc \
     --group 'Shortcuts' --key 'next-session' 'Ctrl+PgDown'
 kwriteconfig5 --file yakuakerc \
     --group 'Shortcuts' --key 'previous-session' 'Ctrl+PgUp'
+kwriteconfig5 --file yakuakerc \
+    --group 'Shortcuts' --key 'view-full-screen' 'F11'
