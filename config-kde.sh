@@ -165,3 +165,10 @@ kwriteconfig5 --file yakuakerc \
 # Make yakuake animation instant.
 kwriteconfig5 --file yakuakerc \
     --group 'Animation' --key 'Frames' '0'
+
+# Yakuake keyboard shortcuts.
+# Make it more like tabs in a web browser.
+kwriteconfig5 --file yakuakerc \
+    --group 'Shortcuts' --key 'next-session' 'Ctrl+PgDown'
+kwriteconfig5 --file yakuakerc \
+    --group 'Shortcuts' --key 'previous-session' 'Ctrl+PgUp'
