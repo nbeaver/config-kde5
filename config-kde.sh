@@ -157,3 +157,11 @@ kwriteconfig5 --file okularpartrc \
 # Open new documents in tabs.
 kwriteconfig5 --file okularpartrc \
     --group 'General' --key 'ShellOpenFileInTabs' --type 'bool' 'true'
+
+# Make yakuake full-width.
+kwriteconfig5 --file yakuakerc \
+    --group 'Window' --key 'Width' '100'
+
+# Make yakuake animation instant.
+kwriteconfig5 --file yakuakerc \
+    --group 'Animation' --key 'Frames' '0'
