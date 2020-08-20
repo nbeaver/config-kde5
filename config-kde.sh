@@ -174,3 +174,15 @@ kwriteconfig5 --file yakuakerc \
     --group 'Shortcuts' --key 'previous-session' 'Ctrl+PgUp'
 kwriteconfig5 --file yakuakerc \
     --group 'Shortcuts' --key 'view-full-screen' 'F11'
+
+# Allow empty clipboard.
+kwriteconfig5 --file klipperrc \
+    --group 'General' --key 'PreventEmptyClipboard' --type bool 'false'
+# Rationale: so password managers can clear the clipboard.
+# https://github.com/keepassxreboot/keepassxc/issues/584
+# https://phabricator.kde.org/D12539
+
+# Clear history on exit.
+kwriteconfig5 --file klipperrc \
+    --group 'General' --key 'KeepClipboardContents' --type bool 'false'
+# Rationale: privacy.
