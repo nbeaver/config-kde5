@@ -186,3 +186,11 @@ kwriteconfig5 --file klipperrc \
 kwriteconfig5 --file klipperrc \
     --group 'General' --key 'KeepClipboardContents' --type bool 'false'
 # Rationale: privacy.
+
+# Set language to "American English"
+kwriteconfig --file kdeglobals --group 'Translations' --key 'LANGUAGE' 'en_US'
+# Rationale: avoid notifications that say:
+# "Language support is incomplete, additional packages are required"
+# https://stackoverflow.com/questions/50784363/remove-kde-notifications-on-language-support-is-incomplete
+# https://unix.stackexchange.com/questions/421066/popup-language-support-is-incomplete-what-packages-does-it-want-to-install
+# https://bugs.launchpad.net/ubuntu/+source/language-selector/+bug/1778082
