@@ -194,3 +194,7 @@ kwriteconfig --file kdeglobals --group 'Translations' --key 'LANGUAGE' 'en_US'
 # https://stackoverflow.com/questions/50784363/remove-kde-notifications-on-language-support-is-incomplete
 # https://unix.stackexchange.com/questions/421066/popup-language-support-is-incomplete-what-packages-does-it-want-to-install
 # https://bugs.launchpad.net/ubuntu/+source/language-selector/+bug/1778082
+
+# Make dolphin open in new tabs.
+kwriteconfig5 --file dolphinrc \
+    --group 'General' --key 'OpenExternallyCalledFolderInNewTab' --type bool 'true'
