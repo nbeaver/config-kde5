@@ -195,6 +195,13 @@ kwriteconfig --file kdeglobals --group 'Translations' --key 'LANGUAGE' 'en_US'
 # https://unix.stackexchange.com/questions/421066/popup-language-support-is-incomplete-what-packages-does-it-want-to-install
 # https://bugs.launchpad.net/ubuntu/+source/language-selector/+bug/1778082
 
-# Make dolphin open in new tabs.
+# Make animations as fast as possible.
+kwriteconfig5 --file kdeglobals --group 'KDE' --key 'AnimationDurationFactor' '0'
+# https://discuss.kde.org/t/can-i-set-animation-speed-to-0-instant-when-on-battery/19370/3
+# https://chenbrian.ca/posts/kwin_choppy_fix/
+# https://bugs.kde.org/show_bug.cgi?id=431259
+# https://www.reddit.com/r/kde/comments/spau5x/animation_speed_has_become_instant/
+
+ Make dolphin open in new tabs.
 kwriteconfig5 --file dolphinrc \
     --group 'General' --key 'OpenExternallyCalledFolderInNewTab' --type bool 'true'
