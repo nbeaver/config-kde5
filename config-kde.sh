@@ -6,7 +6,10 @@
 # ~/.kde/share/apps/RecentDocuments/
 # ~/.local/share/RecentDocuments
 # ~/.local/share/recently-used.xbel
-kwriteconfig --file kdeglobals --group RecentDocuments --key UseRecent false
+if type kwriteconfig >/dev/null
+then
+    kwriteconfig --file kdeglobals --group RecentDocuments --key UseRecent false
+fi
 kwriteconfig5 --file kdeglobals --group RecentDocuments --key UseRecent false
 # Apparently no kcmshell5 command?
 
@@ -188,7 +191,10 @@ kwriteconfig5 --file klipperrc \
 # Rationale: privacy.
 
 # Set language to "American English"
-kwriteconfig --file kdeglobals --group 'Translations' --key 'LANGUAGE' 'en_US'
+if type kwriteconfig >/dev/null
+then
+    kwriteconfig --file kdeglobals --group 'Translations' --key 'LANGUAGE' 'en_US'
+fi
 # Rationale: avoid notifications that say:
 # "Language support is incomplete, additional packages are required"
 # https://stackoverflow.com/questions/50784363/remove-kde-notifications-on-language-support-is-incomplete
@@ -202,6 +208,6 @@ kwriteconfig5 --file kdeglobals --group 'KDE' --key 'AnimationDurationFactor' '0
 # https://bugs.kde.org/show_bug.cgi?id=431259
 # https://www.reddit.com/r/kde/comments/spau5x/animation_speed_has_become_instant/
 
- Make dolphin open in new tabs.
+# Make dolphin open in new tabs.
 kwriteconfig5 --file dolphinrc \
     --group 'General' --key 'OpenExternallyCalledFolderInNewTab' --type bool 'true'
